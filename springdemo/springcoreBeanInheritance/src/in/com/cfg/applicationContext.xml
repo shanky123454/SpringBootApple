@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+      <bean id="companyinfo" class="in.com.employee.Employee" abstract="true">  
+       <property name="companyname" value="socgen"></property>
+       <property name="companyid" value="123"></property>
+       <property name="companyaddress" value="pritech"></property>
+    </bean>
+    
+    <bean id="emp1" class="in.com.employee.Employee" parent="companyinfo">  
+       <property name="eid" value="23083"></property>
+       <property name="ename" value="shashank raj"></property>
+       <property name="eage" value="23"></property>
+      
+    </bean>
+    
+    <bean id="emp2" class="in.com.employee.Employee" parent="companyinfo">  
+       <property name="eid" value="23085"></property>
+       <property name="ename" value="sameer"></property>
+       <property name="eage" value="23"></property>
+      
+    </bean>
+
+</beans>

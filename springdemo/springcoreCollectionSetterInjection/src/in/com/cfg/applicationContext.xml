@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="sysDate" class="java.util.Date"/>
+
+<bean id="dob" class="java.util.Date"> 
+<property name="year" value="34"/>
+<property name="month" value="05"/>
+<property name="date" value="17"/>
+</bean>
+
+
+  <bean id="marks" class="in.com.employee.Employee">  
+        <property name="marksInfo">
+        <array>
+          <value>100.0</value>
+          <value>78.8</value>
+          <value>99.99</value>
+        </array>
+        </property>
+        
+        <property name="listDates">
+        <array>
+        <ref bean="sysDate"/>
+        <ref bean="dob"/>
+        </array>
+        </property>
+    </bean>
+    
+    <bean id="stdCourse" class="in.com.employee.Student">  
+        <property name="courses">
+        <list>
+          <value>DSA</value>
+          <value>OS</value>
+          <value>C++</value>
+        </list>
+        </property>
+        
+        <property name="listDate">
+        
+        <list>
+        <ref bean="sysDate"/>
+        <ref bean="dob"/>
+        </list>
+        </property>
+    </bean>
+    
+    
+    <bean id="team" class="in.com.employee.Teams">  
+        <property name="listTeam">
+        <set>
+          <value>RCB</value>
+          <value>CSK</value>
+          <value>MI</value>
+        </set>
+        </property>
+        
+        <property name="listTeamDate">
+        <set>
+        <ref bean="sysDate"/>
+        <ref bean="dob"/>
+        </set>
+        </property>
+    </bean>
+    
+    
+    <bean id="movie" class="in.com.employee.Movie">  
+        <property name="listMovies">
+        <map>
+        <entry>
+        <key><value>1</value></key>
+        <value>DARUCULLA</value>
+         </entry>
+        <entry key="2" value="ABCD"></entry>
+        <entry key="3" value="FOG"></entry>
+        </map>
+        </property>
+        
+        <property name="listMoviesDate">
+        <map>
+        <entry>
+        <key>
+        <value>today</value>
+        </key>
+        <ref bean="sysDate"/>
+        </entry>
+        <entry key="DOB" value-ref="dob"></entry>
+        </map>
+        </property>
+    </bean>
+    
+    
+    <bean id="players"  class="in.com.employee.Icc">
+    <property name="playerList">
+    <props>
+    <prop key="CSK">DHONI</prop>
+    <prop key="MI">ROHIT</prop>
+    <prop key="RCB">KOHLI</prop>
+    </props>
+    </property>
+    </bean>
+    
+
+</beans>
+

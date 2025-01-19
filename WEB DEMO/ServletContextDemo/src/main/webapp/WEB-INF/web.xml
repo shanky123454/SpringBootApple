@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+  <context-param>
+    <param-name>name</param-name>
+    <param-value>shanky</param-value>
+  </context-param>
+  <context-param>
+    <param-name>id</param-name>
+    <param-value>12</param-value>
+  </context-param>
+  <context-param>
+    <param-name>age</param-name>
+    <param-value>23</param-value>
+  </context-param>
+  
+  
+   <servlet>
+    <servlet-name>ServletContextt</servlet-name>
+    <servlet-class>in.jdbc.demo.controller.ServletContextt</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ServletContextt</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <servlet-name>DisplController</servlet-name>
+    <servlet-class>in.jdbc.demo.controller.DisplController</servlet-class>
+    
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplController</servlet-name>
+    <url-pattern>/disp</url-pattern>
+  </servlet-mapping>
+ 
+</web-app>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Log4j Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family:arial,sans-serif; font-size: medium
+;}th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade="noshade">
+Log session start time Fri Sep 08 01:40:47 IST 2023<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Logger</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>3802</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="in.com.neuron.JdbcApp logger">in.com.neuron.JdbcApp</td>
+<td title="Message">connection got established</td>
+</tr>
+
+<tr>
+<td>3828</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="in.com.neuron.JdbcApp logger">in.com.neuron.JdbcApp</td>
+<td title="Message">statement createdddddd successfully</td>
+</tr>
+
+<tr>
+<td>3854</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="in.com.neuron.JdbcApp logger">in.com.neuron.JdbcApp</td>
+<td title="Message">resultset got executed</td>
+</tr>
+
+<tr>
+<td>3860</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="in.com.neuron.JdbcApp logger">in.com.neuron.JdbcApp</td>
+<td title="Message">end of main method</td>
+</tr>
+</table>
+<br>
+</body></html>

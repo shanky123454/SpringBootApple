@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+<bean id="sqldata" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+ <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+ <property name="url" value="jdbc:mysql:///bakchod"></property>
+ <property name="username" value="root"></property>
+ <property name="password" value="Shanky@123"></property>
+</bean>
+
+<bean id="custDao" class="in.com.dao.CustomerDaoImplClass">
+<constructor-arg name="dataSource" ref="sqldata"></constructor-arg>
+</bean>
+
+<bean id="custService" class="in.com.service.CustomerServiceImplClass" >
+<constructor-arg name="daointerface" ref="custDao"></constructor-arg>
+</bean>
+
+<bean id="custcontroller" class="in.com.controller.CustomerController">
+<constructor-arg name="customerserviceinterface" ref="custService"></constructor-arg>
+</bean>
+
+
+</beans>
+
+

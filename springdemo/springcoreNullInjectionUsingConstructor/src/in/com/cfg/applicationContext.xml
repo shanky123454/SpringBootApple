@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="empdob" class="java.util.Date">
+<property name="month" value="09"></property>
+<property name="year" value="98"></property>
+<property name="date" value="31"></property>
+</bean>
+
+<bean id="empdoj" class="java.util.Date"></bean>
+
+    <bean id="emp" class="in.com.employee.Employee">  
+       <constructor-arg name="eid" value="23083"></constructor-arg>
+       <constructor-arg name="ename" value="shashank raj"></constructor-arg>
+       <constructor-arg name="eage" value="23"></constructor-arg>
+       <constructor-arg name="dob" ref="empdob"></constructor-arg>
+       <constructor-arg name="doj" ref="empdoj"></constructor-arg>
+       <constructor-arg name="address" ref="add"></constructor-arg>
+    </bean>
+    
+    <bean id="add" class="in.com.employee.Address">
+      <constructor-arg name="state" value="KARNATAKA"></constructor-arg>
+      <constructor-arg name="pincode" value="560066"></constructor-arg>
+      <constructor-arg name="city" value="BLR"></constructor-arg>
+    </bean>
+    
+    
+    
+</beans>

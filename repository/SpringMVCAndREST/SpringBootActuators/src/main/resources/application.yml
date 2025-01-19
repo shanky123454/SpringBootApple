@@ -1,0 +1,14 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: health,mappings,beans
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: true
+server:
+  port: 8888
+spring:
+  application:
+    name: actuator demo

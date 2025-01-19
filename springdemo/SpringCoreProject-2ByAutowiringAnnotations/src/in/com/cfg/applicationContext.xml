@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+  <bean id="fflight" class="in.com.CourierImplClass.FirstFlight" primary="true"/>
+   <bean id="couriercompany" class="in.com.CourierImplClass.BlueDart"/>
+    <bean id="dtdc" class="in.com.CourierImplClass.DTDC"/>
+    
+   <!--   <bean id="fpkt" class="in.com.CourierImplClass.Flipkart" >
+     <property name="discount" value="45.67f"></property>
+     <property name="couriercompany" ref="fflight"></property>
+    </bean>
+    
+     <context:annotation-config/> -->
+     
+   <!--  <bean id="fflight" class="in.com.CourierImplClass.FirstFlight"/>
+   <bean id="bdart" class="in.com.CourierImplClass.BlueDart"/>
+    <bean id="dtdc" class="in.com.CourierImplClass.DTDC"/>
+    
+     <bean id="fpkt2" class="in.com.CourierImplClass.Flipkart2">
+     <property name="discount" value="45.67f"></property>
+     <property name="couriercompany" ref="fflight"></property>
+    </bean>
+    
+     <context:annotation-config/>
+      -->
+      
+    <bean id="fpkt" class="in.com.CourierImplClass.Flipkart" autowire="constructor">
+        <constructor-arg name="discount" value="95.00"></constructor-arg>
+    </bean>
+    
+     <context:annotation-config/>
+
+</beans>
+
+
+
+

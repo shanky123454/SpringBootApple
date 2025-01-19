@@ -1,0 +1,7 @@
+demo:
+  properties:
+    greetMsg: Good Morning
+    testMsg: This is test message
+    welcomeMsg: Welcome to PwSkills
+server:
+  port: 8888

@@ -1,0 +1,40 @@
+package in.com.socgen;
+
+import org.hibernate.Session;
+
+import in.com.model.Student;
+import in.com.util.Util;
+
+public class App 
+{
+		public static void main(String[] args) {
+			Session session =null;
+			boolean flag = false;
+			Student student=null;
+			Integer id = 111;
+		try {
+			session= Util.getSession();
+			if(session!=null)
+			{
+			 student = session.get(Student.class,id);}
+			if(student!=null)
+			{
+			flag =true;	
+			}
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}finally {
+			if(flag==true)
+			{
+				System.out.println(student);
+		     }
+			else {
+				System.out.println("data not present with given id" + id);
+			}
+		Util.closeSession(session);
+		Util.closeSessionFactory();
+		}
+	}
+}
+

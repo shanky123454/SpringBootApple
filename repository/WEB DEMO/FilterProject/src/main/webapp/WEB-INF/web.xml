@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>FilterProject</display-name>
+  
+  <filter>
+   
+    <filter-name>Demofilter</filter-name>
+    <filter-class>in.com.filter.Demofilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Demofilter</filter-name>
+    <url-pattern>*</url-pattern>
+  </filter-mapping>
+ 
+<servlet>
+<servlet-name> Testservlet1</servlet-name>
+<servlet-class>in.com.controller.Testservlet1</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>Testservlet1</servlet-name>
+<url-pattern>/test</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name> Testservlet2</servlet-name>
+<servlet-class>in.com.controller.Testservlet2</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>Testservlet2</servlet-name>
+<url-pattern>/test2</url-pattern>
+</servlet-mapping>
+
+</web-app>

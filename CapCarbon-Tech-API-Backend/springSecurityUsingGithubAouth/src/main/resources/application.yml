@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+         github:
+          clientId: b077a9dc60889f3cd657
+          clientSecret: e5828b3aaeb118e0cdf3bb5bd560b3f0e5584b88
+          scope:
+           - user:email
+           - read:user
+           
+
+  main:
+        allow-circular-references: true

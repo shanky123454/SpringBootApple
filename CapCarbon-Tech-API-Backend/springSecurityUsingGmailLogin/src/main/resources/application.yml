@@ -1,0 +1,15 @@
+server:
+  port: 9999
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 514491168959-uvuk7o3pqlahiqa05f7ueaorqdekhnrd.apps.googleusercontent.com
+            client-secret: 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
+           
+
+  main:
+        allow-circular-references: true

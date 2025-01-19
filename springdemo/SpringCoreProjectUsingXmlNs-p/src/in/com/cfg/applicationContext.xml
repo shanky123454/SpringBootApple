@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="fflight" class="in.com.CourierImplClass.FirstFlight"/>
+   <bean id="bdart" class="in.com.CourierImplClass.BlueDart"/>
+    <bean id="dtdc" class="in.com.CourierImplClass.DTDC"/>
+
+   <bean id="fpkt" class="in.com.CourierImplClass.Flipkart" 
+   p:discount="33.5" p:couriercompany-ref="fflight"
+   />
+   
+
+</beans>
+
+
+
+

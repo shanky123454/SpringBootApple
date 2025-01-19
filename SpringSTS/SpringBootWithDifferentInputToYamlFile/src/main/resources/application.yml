@@ -1,0 +1,23 @@
+emp:
+  info:
+    company:
+      location: BLR
+      name: socgen
+      type: product based
+    id: 95
+    id-details:
+      adharno: 234567
+      panno: asdfg456
+      voterid: 6789
+    name: 'shahsank '
+    nick-names:
+    - '"shanky"'
+    - '"raj"'
+    phone-numbers:
+    - 2345678
+    - 9876545
+    - 6787867
+    team-members:
+    - aditya
+    - tapan
+    - thibu

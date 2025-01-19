@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+      <bean id="firstyear" class="in.com.employee.Employee" abstract="true">  
+       <constructor-arg name="courses">
+       <array>
+       <value>m1</value>
+       <value>physics</value>
+       </array>
+       </constructor-arg>
+    </bean>
+    
+      <bean id="cs" class="in.com.employee.Employee" parent="firstyear">
+      <constructor-arg name="courses">
+      <array merge="true">
+      <value>m3</value>
+      <value>dbms</value>
+      </array>
+      </constructor-arg>
+      </bean>
+      
+      <bean id="std" class="in.com.employee.student" abstract="true">
+      <constructor-arg name="course">
+      <props >
+      <prop key="1">physics</prop>
+      <prop key="2">chemistry</prop>
+      <prop key="3">c</prop>
+      </props>
+      </constructor-arg>
+      </bean>
+      
+       <bean id="std1" class="in.com.employee.student" parent="std">
+      <constructor-arg name="course">
+      <props merge="true">
+      <prop key="4">os</prop>
+      <prop key="5">co</prop>
+      <prop key="6">fafl</prop>
+      </props>
+      </constructor-arg>
+      </bean>
+    
+    
+
+</beans>

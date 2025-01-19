@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!--  <bean id="emp" class="in.com.employee.Employee">  
+       <property name="eid" value="23083"></property>
+       <property name="ename" value="shashank raj"></property>
+    </bean> -->
+    
+    
+    <!-- 
+     <bean id="emp" class="in.com.employee.Employee">  
+       <property name="eid" value="23083"></property>
+       <property name="ename" value="shashank raj"></property>
+       <property name="eage" value="23"></property>
+       <property name="address"><null/></property>
+    </bean> -->
+    
+    
+    <bean id="emp" class="in.com.employee.Employee">  
+       <property name="eid" value="23083"></property>
+       <property name="ename" value="shashank raj"></property>
+       <property name="eage" value="23"></property>
+       <property name="address" ref="add"></property>
+    </bean>
+    
+    <bean id="add" class="in.com.employee.Address">
+      <property name="state" value="KARNATAKA"></property>
+      <property name="pincode" value="560066"></property>
+      <property name="city" value="BLR"></property>
+    </bean>
+    
+    
+    
+</beans>

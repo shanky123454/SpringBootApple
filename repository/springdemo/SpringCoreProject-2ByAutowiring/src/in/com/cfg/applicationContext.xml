@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="fflight" class="in.com.CourierImplClass.FirstFlight" primary="true"/>
+   <bean id="bdart" class="in.com.CourierImplClass.BlueDart"/>
+    <bean id="dtdc" class="in.com.CourierImplClass.DTDC"/>
+
+   <!--  <bean id="fpkt" class="in.com.CourierImplClass.Flipkart" autowire="byName">
+     <property name="discount" value="45.67f"></property>
+     <property name="couriercompany" ref="couriercompany"></property>
+    </bean> -->
+    
+     <bean id="fpkt" class="in.com.CourierImplClass.Flipkart" autowire="constructor">
+     <constructor-arg name="discount" value="45.67f"></constructor-arg>
+     <constructor-arg name="couriercompany" ref="fflight"></constructor-arg>
+    </bean>
+    
+   <!--  
+    <bean id="fflight" class="in.com.CourierImplClass.FirstFlight"/>
+   <bean id="bdart" class="in.com.CourierImplClass.BlueDart"/>
+    <bean id="couriercompany" class="in.com.CourierImplClass.DTDC"/>
+    
+    <bean id="fpkt" class="in.com.CourierImplClass.Flipkart" autowire="byName">
+     <property name="discount" value="45.67f"></property>
+    </bean> -->
+    
+    
+       
+   <!--  <bean id="fflight" class="in.com.CourierImplClass.FirstFlight" primary="true"/>
+   <bean id="couriercompany" class="in.com.CourierImplClass.BlueDart" autowire-candidate="false" />
+    <bean id="dtdc" class="in.com.CourierImplClass.DTDC"/>
+    
+    <bean id="fpkt" class="in.com.CourierImplClass.Flipkart" autowire="constructor">
+     <constructor-arg name="discount" value="45.67f"></constructor-arg>
+    </bean> -->
+    
+    
+   <!--   <bean id="fflight" class="in.com.CourierImplClass.FirstFlight" primary="true"/>
+   <bean id="bdart" class="in.com.CourierImplClass.BlueDart" autowire-candidate="false" />
+    <bean id="dtdc" class="in.com.CourierImplClass.DTDC"/>
+    
+    <bean id="fpkt" class="in.com.CourierImplClass.Flipkart" autowire="no">
+     <constructor-arg name="discount" value="45.67f"></constructor-arg>
+     <constructor-arg name="couriercompany" ref="bdart"></constructor-arg>
+    </bean>
+ -->
+</beans>
+
+
+
+

@@ -1,0 +1,7 @@
+#url=jdbc:mysql:///actor
+#user=root
+#password=Shanky@123
+
+jdbcUrl= jdbc:mysql:///actor
+dataSource.userName = root
+dataSource.password = Shanky@123

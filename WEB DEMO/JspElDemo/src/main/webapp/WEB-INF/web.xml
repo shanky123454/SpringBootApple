@@ -1,0 +1,14 @@
+<web-app>
+ <context-param>
+ <param-name>user</param-name>
+ <param-value>root</param-value>
+ </context-param>
+ <context-param>
+ <param-name>url</param-name>
+ <param-value>jdbc:mysql:///octbatch</param-value>
+ </context-param>
+ <context-param>
+ <param-name>pwd</param-name>
+ <param-value>root123</param-value>
+ </context-param>
+</web-app>
